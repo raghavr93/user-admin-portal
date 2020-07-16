@@ -1,0 +1,75 @@
+  input[type] {
+    outline: none;
+    width: 100%;
+    padding: 12px 25px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 25px;
+  }
+  .is-admin input[type] {
+    width: 5%;
+    vertical-align: middle;
+  }
+  .admin-wrap {
+    padding: 2%;
+    margin-left: 17px;
+  }
+  input[type]:focus {
+    outline: none;
+    border-radius: 25px !important;
+    border-color: #06BBA0 !important;
+    border: 1px solid;
+  }
+  .danger {
+    border-radius: 25px !important;
+    border-color:red !important;
+    border: 1px solid;
+  }
+
+  .text-danger {
+    color: rgb(255, 0, 0);
+    margin-left: 30px;
+  }
+
+  button {
+    width: 40%;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    background: #06BBA0;
+    color: #FFF;
+    box-sizing: border-box;
+  }
+
+  button:hover{
+    background: #5ce4cf;
+    color: #FFF;
+  }
+
+  .title-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.08vw;
+    font-weight: 700;
+    color: #135d8f;
+    font-family: "itc-avant-garde-gothic-pro", Bold;
+    margin-bottom: 0;
+  }
+  .registration-main {
+    width: 40%;
+    margin: 0 auto;
+  }
+  .btn-container {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register-form{
+    margin: 70px auto;
+  }

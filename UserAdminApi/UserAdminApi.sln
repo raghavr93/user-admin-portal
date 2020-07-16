@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAdminApi", "UserAdminApi.csproj", "{E608418D-0F49-466F-9D91-5618D64D1278}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E608418D-0F49-466F-9D91-5618D64D1278}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E608418D-0F49-466F-9D91-5618D64D1278}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E608418D-0F49-466F-9D91-5618D64D1278}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E608418D-0F49-466F-9D91-5618D64D1278}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6C55050-84EA-4C9E-9A53-764721557E64}
+	EndGlobalSection
+EndGlobal

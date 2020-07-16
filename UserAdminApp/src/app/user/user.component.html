@@ -1,0 +1,33 @@
+<div>
+<h2 class="title-text">User List</h2>
+<svg class="active-tab-ul" height="5" width="5%" style="display: flex; margin: 3px auto 0;">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#06BBA0;stroke-width:4"></line>
+</svg> 
+  <table class="login-form">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Age in Years</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | paginate: { id: 'listing_pagination',
+          itemsPerPage: 4,
+          currentPage: page,
+          totalIdems: totalRecords }">
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.age }}</td>
+        </tr>
+      </tbody>
+  </table>
+  <div style="margin-left: 464px">
+    <pagination-controls  id="listing_pagination"
+                      maxSize="4"
+                      directionLinks="true"
+                      (pageChange)="page = $event"
+                     >
+</pagination-controls>
+  </div>
+</div>

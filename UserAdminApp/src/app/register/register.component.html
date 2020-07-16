@@ -1,0 +1,74 @@
+<div class="register-form">
+    <h2 class="title-text">Register</h2>
+    <svg class="active-tab-ul" height="5" width="5%" style="display: flex; margin: 3px auto 0;">
+      <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#06BBA0;stroke-width:4"></line>
+    </svg>
+  <div class="registration-main">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div>
+        <input type="text" [class.danger]="firstname.invalid && firstname.touched" placeholder="First Name" formControlName="firstname">
+        <div *ngIf="firstname.invalid && firstname.touched">
+          <small class="text-danger" *ngIf="firstname.errors?.required">First Name is required</small>
+          <small class="text-danger" *ngIf="firstname.errors?.maxlength">Max length is 100</small>
+        </div>  
+      </div>
+
+      <div>
+        <input type="text" [class.danger]="lastname.invalid && lastname.touched" placeholder="Last Name" formControlName="lastname">
+        <div *ngIf="lastname.invalid && lastname.touched">
+            <small class="text-danger" *ngIf="lastname.errors?.maxlength">Max length is 100</small>
+        </div>  
+      </div>
+
+      <div>
+        <input type="text" [class.danger]="email.invalid && email.touched" placeholder="Email" formControlName="email">
+        <div *ngIf="email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.required">Email is required</small>
+          <small class="text-danger" *ngIf="email.errors?.email">Invalid email format</small>
+          <small class="text-danger" *ngIf="email.errors?.isExists">Email already exists!></small>
+        </div>          
+      </div>
+
+      <div>
+        <input type="text" placeholder="Date of Birth" bsDatepicker [bsConfig]="datepickerConfig" [class.danger]="dateOfBirth.invalid && dateOfBirth.touched"  bsDatepicker formControlName="dateOfBirth">
+        <div *ngIf="dateOfBirth.invalid && dateOfBirth.touched">
+          <small class="text-danger" *ngIf="dateOfBirth.errors?.required">Date of Birth is required</small>
+          <small class="text-danger" *ngIf="email.errors && email.errors.emailTaken">
+            This email is already taken!</small>
+        </div>          
+      </div>
+      
+      <div>
+        <input type="password" [class.danger]="password.invalid && password.touched" placeholder="Password" formControlName="password">
+        <div *ngIf="password.invalid && password.touched">
+            <small class="text-danger" *ngIf="password.errors?.required">Password is required</small>
+          <small class="text-danger" *ngIf="password.errors?.minlength">Min Length 8 characters</small>
+        </div> 
+      </div>
+  
+      <div>
+        <input type="text" [class.danger]="address.invalid && address.touched" placeholder="Address" formControlName="address">
+        <div *ngIf="address.invalid && address.touched">
+            <small class="text-danger" *ngIf="address.errors?.maxlength">Max length is 300</small>
+        </div>  
+      </div>
+
+      <div class="admin-wrap">
+      <label>Is the Role Admin?</label>
+      <div class="is-admin">
+        <input type="radio" value="Admin" name="role" formControlName="role">Yes
+        <input type="radio" value="User"  name="role" formControlName="role">No
+      </div>
+          <div *ngIf="role.invalid && role.touched">
+            <small class="text-danger" *ngIf="role.errors?.required">Please select one</small>
+        </div> 
+      </div>
+        
+    
+      <div class="btn-container">
+        <button  [disabled]="!registrationForm.valid" type="submit">Register</button>
+      </div>
+    </form>
+  
+  </div>
+</div>

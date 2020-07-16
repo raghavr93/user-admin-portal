@@ -1,0 +1,32 @@
+<div class="login-form">
+    <h2 class="title-text">Admin Login</h2>
+    <svg class="active-tab-ul" height="5" width="5%" style="display: flex; margin: 3px auto 0;">
+      <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#06BBA0;stroke-width:4"></line>
+    </svg>
+    <div class="login-main">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <div>
+        <input type="text" [class.danger]="email.invalid && email.touched" placeholder="Email" formControlName="email" class="form-control">
+        <div *ngIf="email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.required">Email is required</small>
+          <small class="text-danger" *ngIf="email.errors?.email">Invalid email format</small>
+        </div>          
+      </div>
+      
+      <div>
+        <input type="password" [class.danger]="password.invalid && password.touched" placeholder="Password" formControlName="password" class="form-control">
+        <div *ngIf="password.invalid && password.touched">
+          <small class="text-danger" *ngIf="password.errors?.required">Password is required</small>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button [disabled]="!loginForm.valid" type="submit">Login</button>
+      </div>
+
+      <div *ngIf="showErrorMessage">
+        <small class="text-danger-error">Invalid Email and password, Please try again!</small>
+      </div>
+    </form>
+  </div>
+</div>
