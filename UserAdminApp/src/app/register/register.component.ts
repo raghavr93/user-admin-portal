@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
-import { FormBuilder, FormGroup, Validators, ValidatorFn, AsyncValidatorFn, AbstractControl, ValidationErrors, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl} from '@angular/forms';
 import { map} from "rxjs/operators";
 
 @Component({
